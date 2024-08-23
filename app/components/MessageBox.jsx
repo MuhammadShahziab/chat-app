@@ -82,7 +82,7 @@ const MessageBox = ({
             )}
           </p>
         ) : (
-          <div className="bg-white relative p-1 rounded-lg w-48 mb-2 cursor-pointer h-[200px] md:min-w-64 md:max-h-[250px]">
+          <div className="bg-white relative p-1 mt-1 rounded-lg w-48 mb-2 cursor-pointer h-[200px] md:min-w-64 md:max-h-[250px]">
             <img
               src={message?.photo}
               onClick={() => handleImageClick(message?.photo)}
@@ -177,7 +177,7 @@ const MessageBox = ({
             )}
           </p>
         ) : (
-          <div className="bg-white relative p-1 rounded-lg w-48 mb-2 cursor-pointer h-[200px] md:min-w-64 md:max-h-[250px]">
+          <div className="bg-white relative mt-1 p-1 rounded-lg w-48 mb-2 cursor-pointer h-[200px] md:min-w-64 md:max-h-[250px]">
             <img
               src={message?.photo}
               onClick={() => handleImageClick(message?.photo)}

@@ -299,9 +299,9 @@ const ChatDetail = ({ chatId }) => {
           />
         ))}
         {showPicker && (
-          <div className="absolute bottom-16 ">
+          <div className="absolute bottom-16 right-1 ">
             <Picker
-              style={{ height: "300px" }}
+              style={{ height: "200px " }}
               data={data}
               onEmojiSelect={onEmojiClick}
             />

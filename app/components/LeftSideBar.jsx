@@ -96,7 +96,9 @@ const LeftSideBar = ({ chatId }) => {
 
   const handleLogout = async () => {
     try {
-      await signOut({ callbackUrl: "https://chat-app-nu-navy-90.vercel.app/" });
+      await signOut({
+        callbackUrl: "https://chat-app-by-shahzaib.vercel.app/",
+      });
     } catch (error) {
       console.log(error);
     }

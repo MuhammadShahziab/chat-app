@@ -64,6 +64,11 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        chat_bg: "url('/assets/bg.jpg')",
+        reservation_shape: "url('/assets/images/reservation-shape.png')",
+        footer_shape: "url('/assets/images/background.jpg')",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
