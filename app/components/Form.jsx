@@ -148,12 +148,16 @@ const Form = ({ setAuth }) => {
       </div>
       <div>
         <div className="flex gap-x-2 text-[#808080] text-[12px] md:text-sm mx-3 mt-2">
-          <input
-            type="checkbox"
-            className="outline-none border"
-            {...register("term", { required: "Cheked terms and conditions" })}
-          />
-          <p>Agree to the terms of use & privacy policy</p>
+          <label className="flex items-center gap-x-2 cursor-pointer">
+            <input
+              type="checkbox"
+              className="outline-none border"
+              {...register("term", {
+                required: "Checked terms and conditions",
+              })}
+            />
+            <p>Agree to the terms of use & privacy policy</p>
+          </label>
         </div>
         {errors.term && (
           <p className="text-red-500 text-sm ml-8 mt-1 ">

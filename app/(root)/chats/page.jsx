@@ -5,11 +5,11 @@ import React from "react";
 const ChatsPage = () => {
   return (
     <Box>
-      <div className=" grid grid-cols-12 rounded-lg h-full  lg:min-h-[88vh] overflow-hidden lg:max-h-[88vh]    ">
+      <div className=" grid grid-cols-12  rounded-lg h-full  lg:min-h-[88vh] overflow-hidden lg:max-h-[88vh]    ">
         <div className="grid col-span-12 md:col-span-5 lg:col-span-3 md:border-r  ">
           <LeftSideBar />
         </div>
-        <div className="grid col-span-7 lg:col-span-9 max-md:hidden ">
+        <div className="grid col-span-7 lg:col-span-9 bg-white max-md:hidden ">
           <div className="flex flex-col justify-center  items-center">
             <img
               src="/assets/group-chat.png"

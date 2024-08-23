@@ -25,6 +25,10 @@ const LoginPage = () => {
         src="/assets/circle.svg"
         className="absolute -bottom-9  md:-bottom-7 -right-9 w-40"
       ></img>
+      <img
+        src="/assets/chat.png"
+        className="absolute bottom-8 right-5  animate-rotate-left-right"
+      ></img>
     </div>
   );
 };

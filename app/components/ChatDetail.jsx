@@ -213,8 +213,8 @@ const ChatDetail = ({ chatId }) => {
   }, [chatId]);
 
   return (
-    <div className="w-full h-full  flex flex-col  bg-transparent relative">
-      <div className="py-3 lg:py-2 px-3 flex items-center justify-between">
+    <div className="w-full h-full  flex flex-col   relative">
+      <div className="py-3 lg:py-2 px-3  flex items-center justify-between">
         <div className="flex items-center gap-x-3">
           {chat?.isGroup ? (
             chat?.groupPhoto ? (
@@ -283,7 +283,7 @@ const ChatDetail = ({ chatId }) => {
       {/* Chat Section */}
       <div
         ref={messagesContainerRef}
-        className="flex-1 flex outline-none flex-col py-4 lg:py-6   pl-3 pr-4 scrollbar-hide  lg:max-h-[69vh] lg:min-h-[69vh] max-lg:min-h-[86vh] max-lg:max-h-[86vh] overflow-y-scroll"
+        className="flex-1 flex outline-none flex-col py-4 lg:py-6   pl-3 pr-4 scrollbar-hide  lg:max-h-[69vh] lg:min-h-[69vh] max-lg:min-h-[83vh] max-lg:max-h-[83vh] overflow-y-scroll"
       >
         {chat?.messages?.map((message, index) => (
           <MessageBox

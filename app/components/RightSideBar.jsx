@@ -124,8 +124,8 @@ const RightSideBar = ({ chatId }) => {
   }, [currentUser, chatId]);
 
   return (
-    <div className="overflow-x-hidden bg-white rounded-lg  h-full">
-      <div className="h-[50%]  relative ">
+    <div className="overflow-hidden bg-white rounded-lg  h-full">
+      <div className="h-[55%]  relative ">
         <div className="flex-col flex items-center pt-4 relative">
           {loading ? (
             <Skeleton className="w-20 h-20  mb-2 rounded-full" />
@@ -251,36 +251,42 @@ const RightSideBar = ({ chatId }) => {
         <hr className="mt-3" />
 
         {chat?.isGroup ? (
-          <div>
-            <div className="flex justify-between items-center px-3 py-2">
-              <p className="text-[#c4c4c4] text-sm text-start font-semibold">
+          <div className="">
+            <div className="flex flex-col gap-y-1 px-3 py-2">
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-softtext">Created At</p>{" "}
+                {loading ? (
+                  <Skeleton className="h-2 w-24" />
+                ) : (
+                  <p className="text-[12px]">
+                    {moment(chat?.createdAt).format("llll")}
+                  </p>
+                )}{" "}
+              </div>
+
+              <p className="text-[#c4c4c4] text-sm text-start font-medium">
                 Group Members
               </p>
-              {loading ? (
-                <Skeleton className="h-2 w-24" />
-              ) : (
-                <p className="text-[12px]">
-                  {moment(chat?.createdAt).format("llll")}
-                </p>
-              )}
             </div>
-            <div className="flex gap-2 px-3 items-center flex-wrap">
-              {loading
-                ? Array(6)
-                    .fill("")
-                    .map((item, index) => (
-                      <Skeleton key={index} className="h-5 w-20 rounded-md" />
-                    ))
-                : chat?.members.map((member, index) => (
-                    <p
-                      key={index}
-                      className={`${GetColor(
-                        member?.username
-                      )} px-2 py-1 rounded-md shadow-md text-sm text-white`}
-                    >
-                      {member?.username}
-                    </p>
-                  ))}
+            <div className=" max-h-[80px] ">
+              <div className="flex gap-2 px-3 items-center overflow-y-scroll py-1">
+                {loading
+                  ? Array(6)
+                      .fill("")
+                      .map((item, index) => (
+                        <Skeleton key={index} className="h-5 w-20 rounded-md" />
+                      ))
+                  : chat?.members.map((member, index) => (
+                      <p
+                        key={index}
+                        className={`${GetColor(
+                          member?.username
+                        )} px-2 py-1 rounded-md shadow-md text-sm text-white`}
+                      >
+                        {member?.username}
+                      </p>
+                    ))}
+              </div>
             </div>
           </div>
         ) : (

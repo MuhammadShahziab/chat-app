@@ -96,7 +96,7 @@ const LeftSideBar = ({ chatId }) => {
 
   const handleLogout = async () => {
     try {
-      await signOut({ callbackUrl: "/" });
+      await signOut({ callbackUrl: "https://chat-app-nu-navy-90.vercel.app/" });
     } catch (error) {
       console.log(error);
     }
@@ -261,7 +261,7 @@ const LeftSideBar = ({ chatId }) => {
             </span>
           )}
         </div>
-        <DropdownMenu>
+        <DropdownMenu className="mr-5 bg-red-500">
           <DropdownMenuTrigger>
             <HiDotsVertical className="absolute text-softtext right-7 lg:right-3 top-[28px]"></HiDotsVertical>
           </DropdownMenuTrigger>
@@ -319,7 +319,7 @@ const LeftSideBar = ({ chatId }) => {
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>
+              <DialogTitle className="text-start mb-1">
                 Create Group{" "}
                 {selectedContacts.length > 1 && (
                   <span className="text-[12px] text-softtext my-1">
@@ -329,7 +329,7 @@ const LeftSideBar = ({ chatId }) => {
               </DialogTitle>
               <DialogDescription>
                 {createGroup ? (
-                  <div className="flex w-full gap-x-2 max-md:pr-3">
+                  <div className="flex lg:flex-row flex-col gap-y-2 w-full py-1 gap-x-2 ">
                     <div className="input px-2 py-2 flex-1">
                       <input
                         type="text"
@@ -339,17 +339,17 @@ const LeftSideBar = ({ chatId }) => {
                         onChange={(e) => setName(e.target.value)}
                       />
                     </div>
-                    <div className="flex gap-x-1">
+                    <div className="flex justify-center gap-x-1">
                       <button
                         onClick={() => setCreateGroup(false)}
-                        className="bg-sky-100 px-3 w-[70px] flex justify-center items-center rounded-full shadow-md text-sm text-sky-500"
+                        className="bg-sky-100 px-3 max-lg:flex-1 max-lg:py-1 w-[70px] flex justify-center items-center rounded-full shadow-md text-sm text-sky-500"
                       >
                         <IoIosAddCircle className="text-2xl" />
                       </button>
                       <button
                         onClick={handleCreateGroup}
                         disabled={!name}
-                        className="bg-green-100 flex gap-x-1 items-center justify-center px-3 min-w-[70px] rounded-full shadow-md text-sm text-green-500"
+                        className="bg-green-100 max-lg:flex-1 max-lg:py-1 flex gap-x-1 items-center justify-center px-3 min-w-[70px] rounded-full shadow-md text-sm text-green-500"
                       >
                         Create
                         {loading && <ClipLoader size={15} color="#ffff" />}
@@ -371,7 +371,7 @@ const LeftSideBar = ({ chatId }) => {
                   </div>
                 )}
 
-                <div className="mb-11 mt-1 max-h-[50vh] min-h-[50vh] relative overflow-y-scroll max-md:scrollbar-hide">
+                <div className=" mt-3   max-h-[53vh] min-h-[53vh]  lg:max-h-[50vh] lg:min-h-[50vh]  relative overflow-y-scroll max-md:scrollbar-hide">
                   {contacts.map((item, index) => (
                     <ContactBox
                       contact={item}
