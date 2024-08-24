@@ -26,7 +26,7 @@ const LoginPage = () => {
 
       {/* Decorative Images */}
 
-      <img
+      {/* <img
         src="/assets/circle.svg"
         className="absolute top-[-36px] lg:hidden left-[-36px] w-40"
         alt="Circle"
@@ -46,7 +46,7 @@ const LoginPage = () => {
         src="/assets/chat.png"
         className="absolute bottom-8 right-5  animate-rotate-left-right"
         alt="Chat"
-      />
+      /> */}
     </div>
   );
 };
