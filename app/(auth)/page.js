@@ -20,13 +20,13 @@ const LoginPage = () => {
       </div>
 
       {/* Form Section */}
-      <div className="flex flex-1 justify-center lg:items-center p-4 md:p-0">
+      <div className="flex flex-1 justify-center lg:items-center pr-4  md:p-0">
         <Form setAuth={setAuth} />
       </div>
 
       {/* Decorative Images */}
 
-      {/* <img
+      <img
         src="/assets/circle.svg"
         className="absolute top-[-36px] lg:hidden left-[-36px] w-40"
         alt="Circle"
@@ -46,7 +46,7 @@ const LoginPage = () => {
         src="/assets/chat.png"
         className="absolute bottom-8 right-5  animate-rotate-left-right"
         alt="Chat"
-      /> */}
+      />
     </div>
   );
 };
