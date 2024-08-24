@@ -75,7 +75,7 @@ const Form = ({ setAuth }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className=" flex  flex-col gap-y-3 px-6 max-md:mt-20 relative "
+      className=" flex  flex-col gap-y-3 px-6 max-md:mt-20 relative  "
     >
       <div className="flex justify-center items-center w-full mb-8 md:hidden">
         <img src="/assets/logo.png" className="w-16  "></img>

@@ -5,8 +5,8 @@ import React, { useState } from "react";
 const LoginPage = () => {
   const [auth, setAuth] = useState(null);
   return (
-    <div className="flex min-h-screen relative overflow-hidden">
-      <div className="w-[30%] max-md:hidden md:flex bg-orange rounded-tr-lg rounded-br-lg  ">
+    <div className="flex min-h-screen  relative overflow-hidden">
+      <div className="w-[30%] hidden md:flex bg-orange rounded-tr-lg rounded-br-lg h-full ">
         <div className="flex flex-col gap-y-3 items-center w-full mt-11">
           <img src="/assets/logo.png" className="w-32 opacity-90"></img>
           <p className="text-white font-semibold capitalize text-2xl">{auth}</p>
@@ -18,7 +18,7 @@ const LoginPage = () => {
           <img src="/assets/hot_tea.svg" className="w-24 mt-16 "></img>
         </div>
       </div>
-      <div className="flex flex-1 justify-center items-start md:items-center ">
+      <div className="flex flex-1 justify-center items-start md:items-center p-4 md:p-0 h-full   ">
         <Form setAuth={setAuth}></Form>
       </div>
       <img
